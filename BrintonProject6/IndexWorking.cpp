@@ -53,7 +53,7 @@ using namespace std; // Announces to the compiler that members of the namespace
 // "std" are utilized in this program
 
 // Method Prototype Declaration
-void printReverse(char* s, int index);
+void printReverse(char* s);
 
 /******************************************************************************
 * Method: main()
@@ -96,7 +96,7 @@ int main()
 
 	cout << "The reversed string is :\n";
 	// Start the recursion at the first character in the array
-	printReverse(str, 0);
+	printReverse(str);
 
 
 	// This prevents the Console Window from closing during debug mode
@@ -137,13 +137,13 @@ int main()
 *
 ******************************************************************************
 */
-void printReverse(char* phrase, int index)
+void printReverse(char* phrase)
 {
 
-	if (phrase[index] != '\0')
-		printReverse(phrase, index + 1);
+	if (*phrase != '\0')
+		printReverse(phrase + 1);
 
-	if (phrase[index] != '\0')
-		cout << phrase[index];
+	if (*phrase != '\0')
+		cout << *phrase;
 
 }	// End method: printReverse(char*, int)
