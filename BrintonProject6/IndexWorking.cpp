@@ -11,12 +11,12 @@
 * will transfer execution to the first line of code in method main(). Other
 * methods called from main() may be defined here as well.
 *
-* Programmer: ** Your Name Here **
+* Programmer: Colin Brinton
 * Assigned Project: 6
 *
 * Revision     Date                        Release Comment
 * --------  ----------  ------------------------------------------------------
-*   1.0     mm/dd/2014  Initial Release
+*   1.0     05/14/2014  Initial Release
 *
 * File Methods
 * ------------
@@ -141,9 +141,9 @@ void printReverse(char* phrase)
 {
 
 	if (*phrase != '\0')
+	{
 		printReverse(phrase + 1);
-
-	if (*phrase != '\0')
 		cout << *phrase;
+	}
 
 }	// End method: printReverse(char*, int)
