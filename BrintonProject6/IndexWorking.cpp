@@ -79,7 +79,9 @@ void printReverse(char* s);
 * ---------------
 *      Name                            Description
 * --------------  ------------------------------------------------------------
-*
+* printReverse()   Receives a pointer to a string. Scans forward until it reaches
+*					a null character (\0). Prints each charecter staring from the
+*					the end, moving backwards as it returns. 
 ******************************************************************************
 */
 int main()
@@ -111,18 +113,21 @@ int main()
 
 
 /******************************************************************************
-* Method: printReverse(char*, int)
+* Method: printReverse(char*)
 *
 * Method Description
 * ------------------
-*
+* Receives a pointer to a string via the first char address. Scans forward until it reaches
+*	a null character (\0). Prints each charecter staring from the
+*	the end, moving backwards as it returns. 
 *
 *
 * Method Arguments
 * ----------------
 *   Type        Name                        Description
 * --------  -------------  ---------------------------------------------------
-* None
+* char*		phrase			A pointer to the first character in a user generated
+*							string.
 *
 * Return Value
 * ------------
@@ -134,16 +139,20 @@ int main()
 * ---------------
 *      Name                            Description
 * --------------  ------------------------------------------------------------
+* printReverse()	This is a recursive method. It calls itself if the current char
+*					in the array is NOT '\0'. Advances one character each call by
+*					adding 1 to phrase. As each call returns, it prints its char.
 *
 ******************************************************************************
 */
 void printReverse(char* phrase)
 {
-
+	// If the current char is not a null terminator, call printReverse, advancing
+	// one character
 	if (*phrase != '\0')
 	{
-		printReverse(phrase + 1);
-		cout << *phrase;
+		printReverse(phrase + 1);    // Recursive call. + 1 to advance one char
+		cout << *phrase;	         // Print the current char as each call RETurns
 	}
 
-}	// End method: printReverse(char*, int)
+}	// End method: printReverse(char*)
