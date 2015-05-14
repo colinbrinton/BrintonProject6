@@ -80,7 +80,7 @@ void printReverse(char* s);
 *      Name                            Description
 * --------------  ------------------------------------------------------------
 * printReverse()   Receives a pointer to a string. Scans forward until it reaches
-*					a null character (\0). Prints each charecter staring from the
+*					a null character (\0). Prints each character staring from the
 *					the end, moving backwards as it returns. 
 ******************************************************************************
 */
@@ -118,7 +118,7 @@ int main()
 * Method Description
 * ------------------
 * Receives a pointer to a string via the first char address. Scans forward until it reaches
-*	a null character (\0). Prints each charecter staring from the
+*	a null character (\0). Prints each character staring from the
 *	the end, moving backwards as it returns. 
 *
 *
